@@ -36,7 +36,7 @@ const data = [
         A single <code>pip install scviva-tools</code> replaces juggling separate packages, docs, and
         release cadences for each spatial method, with optional{" "}
         <a href="https://spatialdata.scverse.org/">SpatialData</a>/
-        <a href="https://squidpy.readthedocs.io/">squidy</a> interop via the <code>spatial</code> extra.
+        <a href="https://squidpy.readthedocs.io/">squidpy</a> interop via the <code>spatial</code> extra.
       </>
     ),
   },
