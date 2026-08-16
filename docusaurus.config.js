@@ -91,10 +91,8 @@ module.exports = {
       {
         hashed: true,
         language: ["en"],
-        indexDocs: true,
         indexBlog: true,
         indexPages: true,
-        docsRouteBasePath: "/get_started",
       },
     ],
   ],
@@ -102,14 +100,6 @@ module.exports = {
     [
       "@docusaurus/preset-classic",
       {
-        docs: {
-          path: "get_started",
-          routeBasePath: "get_started",
-          sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/YosefLab/scviva-tools-website/edit/main/get_started/",
-          remarkPlugins: [math],
-          rehypePlugins: [[katex, { strict: false }]],
-        },
         blog: {
           showReadingTime: true,
           editUrl: "https://github.com/YosefLab/scviva-tools-website/edit/main/blog/",

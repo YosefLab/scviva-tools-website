@@ -15,7 +15,7 @@ const CHECKS = [
     ],
   },
   {
-    file: "get_started/get_started/index.html",
+    file: "get_started/index.html",
     includes: [
       "pip install scviva-tools",
       "scviva-tools[spatial]",
