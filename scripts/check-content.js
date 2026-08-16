@@ -40,6 +40,11 @@ const CHECKS = [
     file: "ecosystem/index.html",
     includes: ["scVIVA", "ResolVI", "DestVI", "DiagVI", "Harreman", "gimVI", "Stereoscope", "Tangram"],
   },
+  {
+    file: "blog/scviva-tools/index.html",
+    includes: ["Introducing scVIVA-Tools", "pip install scviva-tools"],
+    excludes: ["scVI-Tools MCP", "Model Context Protocol"],
+  },
 ];
 
 function readBuiltFile(relativePath) {
