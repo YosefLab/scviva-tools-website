@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: scviva-tools issues
+    url: https://github.com/YosefLab/scviva-tools/issues
+    about: Bugs or feature requests about scviva-tools itself (not this website) belong here.
+  - name: scviva-tools Discussions
+    url: https://github.com/YosefLab/scviva-tools/discussions
+    about: Usage questions about scviva-tools.

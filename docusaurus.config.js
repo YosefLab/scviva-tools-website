@@ -4,10 +4,11 @@ const { themes: prismThemes } = require("prism-react-renderer");
 
 module.exports = {
   title: "scVIVA-Tools",
-  tagline: "Consolidated spatial transcriptomics analysis toolkit built on scvi-tools",
+  tagline:
+    "Consolidated spatial transcriptomics analysis toolkit built on scvi-tools",
   url: "https://scviva-tools.org",
   baseUrl: "/",
-  onBrokenLinks: "warn",
+  onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/logo.png",
   organizationName: "YosefLab",
@@ -93,7 +94,8 @@ module.exports = {
         blog: {
           showReadingTime: true,
           onInlineAuthors: "ignore",
-          editUrl: "https://github.com/YosefLab/scviva-tools-website/edit/main/blog/",
+          editUrl:
+            "https://github.com/YosefLab/scviva-tools-website/edit/main/blog/",
           remarkPlugins: [math],
           rehypePlugins: [[katex, { strict: false }]],
         },
