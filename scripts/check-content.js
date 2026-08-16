@@ -36,6 +36,10 @@ const CHECKS = [
       "10.1101/2025.11.11.687271",
     ],
   },
+  {
+    file: "ecosystem/index.html",
+    includes: ["scVIVA", "ResolVI", "DestVI", "DiagVI", "Harreman", "gimVI", "Stereoscope", "Tangram"],
+  },
 ];
 
 function readBuiltFile(relativePath) {
