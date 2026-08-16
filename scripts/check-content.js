@@ -14,6 +14,15 @@ const CHECKS = [
       "Unified AnnData-first API",
     ],
   },
+  {
+    file: "get_started/get_started/index.html",
+    includes: [
+      "pip install scviva-tools",
+      "scviva-tools[spatial]",
+      "scviva-tools[rapids]",
+      "ResolVI",
+    ],
+  },
 ];
 
 function readBuiltFile(relativePath) {
