@@ -6,15 +6,23 @@ import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import styles from "./styles.module.scss";
 
 function TeamCard(props) {
-  const { name, websiteLink, description, image, githubLink, twitterLink } = props;
+  const { name, websiteLink, description, image, githubLink, twitterLink } =
+    props;
 
   return (
     <div className={`${styles.teamCard} card`}>
       <div className={`${styles.teamAvatar} avatar`}>
-        <img className="avatar__photo avatar__photo--xl" src={image || useBaseUrl(`img/logo.png`)} />
+        <img
+          className="avatar__photo avatar__photo--xl"
+          src={image || useBaseUrl(`img/logo.png`)}
+        />
         <div className={`${styles.teamCardContent} avatar__intro`}>
           {websiteLink ? (
-            <a className={`${styles.teamCardName} avatar__name`} href={websiteLink} target="_blank">
+            <a
+              className={`${styles.teamCardName} avatar__name`}
+              href={websiteLink}
+              target="_blank"
+            >
               {name}
             </a>
           ) : (

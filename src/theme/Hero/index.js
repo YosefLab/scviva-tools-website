@@ -19,13 +19,19 @@ function Hero() {
           <div className={classnames("col col--6 col--offset-1")}>
             <h1 className="hero__title">{siteConfig.tagline}</h1>
             <p className={clsx("hero__subtitle", styles.subtitle)}>
-              scVIVA-Tools unifies scVIVA, ResolVI, DestVI, DiagVI, Harreman, gimVI, Stereoscope, and
-              Tangram behind one AnnData-first API, built on scvi-tools.
+              scVIVA-Tools unifies scVIVA, ResolVI, DestVI, DiagVI, Harreman,
+              gimVI, Stereoscope, and Tangram behind one AnnData-first API,
+              built on scvi-tools.
             </p>
-            <CodeBlock className="language-sh">pip install scviva-tools</CodeBlock>
+            <CodeBlock className="language-sh">
+              pip install scviva-tools
+            </CodeBlock>
             <div className={styles.buttons}>
               <Link
-                className={clsx("button button--primary button--outline button--lg", styles.getStarted)}
+                className={clsx(
+                  "button button--primary button--outline button--lg",
+                  styles.getStarted,
+                )}
                 to={useBaseUrl("get_started/")}
               >
                 Get Started
@@ -33,7 +39,11 @@ function Hero() {
             </div>
           </div>
           <div className={classnames("col col--4")}>
-            <img src={useBaseUrl(`img/logo.png`)} alt="scVIVA-Tools Logo" className={styles.heroImg} />
+            <img
+              src={useBaseUrl(`img/logo.png`)}
+              alt="scVIVA-Tools Logo"
+              className={styles.heroImg}
+            />
           </div>
         </div>
       </div>

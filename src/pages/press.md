@@ -5,33 +5,33 @@
 - **scVIVA**: a probabilistic framework for representation of cells and their environments in
   spatial transcriptomics.
   N. Levy, F. Ingelfinger, A. Bakulin, G. Cinnirella, P. Boyeau, B. Nadler, C. Ergen, N. Yosef.
-  *bioRxiv*, 2025. doi: [10.1101/2025.06.01.657182](https://doi.org/10.1101/2025.06.01.657182)
+  _bioRxiv_, 2025. doi: [10.1101/2025.06.01.657182](https://doi.org/10.1101/2025.06.01.657182)
 
 - **DestVI** identifies continuums of cell types in spatial transcriptomics data.
   R. Lopez\*, B. Li\*, H. Keren-Shaul\*, P. Boyeau, M. Kedmi, D. Pilzer, A. Jelinski, I. Yofe, E. David,
   A. Wagner, Y. Addadi, O. Golani, F. Ronchese, M.I. Jordan, I. Amit†, N. Yosef†.
-  *Nature Biotechnology*, 2022. doi: [10.1038/s41587-022-01272-8](https://doi.org/10.1038/s41587-022-01272-8)
+  _Nature Biotechnology_, 2022. doi: [10.1038/s41587-022-01272-8](https://doi.org/10.1038/s41587-022-01272-8)
 
 - **ResolVI**: addressing noise and bias in spatial transcriptomics.
   C. Ergen, N. Yosef.
-  *bioRxiv*, 2025. doi: [10.1101/2025.01.20.634005](https://doi.org/10.1101/2025.01.20.634005)
+  _bioRxiv_, 2025. doi: [10.1101/2025.01.20.634005](https://doi.org/10.1101/2025.01.20.634005)
 
 - **Harreman**: metabolic zonation and characterization of tissue slices with spatial transcriptomics.
   Etxezarreta Arrastoa et al.
-  *bioRxiv*, 2025. doi: [10.1101/2025.11.11.687271](https://doi.org/10.1101/2025.11.11.687271)
+  _bioRxiv_, 2025. doi: [10.1101/2025.11.11.687271](https://doi.org/10.1101/2025.11.11.687271)
 
 - **gimVI**: a joint model of unpaired data from scRNA-seq and spatial transcriptomics for imputing
   missing gene expression measurements.
   R. Lopez\*, A. Nazaret\*, M. Langevin\*, J. Samaran\*, J. Regier\*, M.I. Jordan, N. Yosef.
-  *ICML Workshop on Computational Biology*, 2019.
+  _ICML Workshop on Computational Biology_, 2019.
 
 - **Stereoscope**: probabilistic cell-type deconvolution of spatial transcriptomics spots.
   Andersson et al.
-  *Communications Biology*, 2020.
+  _Communications Biology_, 2020.
 
 - **Tangram**: deep learning-based mapping of single-cell RNA-seq data onto spatial coordinates.
   T. Biancalani et al.
-  *Nature Methods*, 2021.
+  _Nature Methods_, 2021.
 
 - **DiagVI**: no dedicated scviva-tools publication yet (newest model, under active development).
   Builds on optimal-transport correspondence methods:
@@ -40,5 +40,5 @@
 ## Foundation
 
 - A Python library for probabilistic analysis of single-cell omics data.
-  A. Gayoso et al. *Nature Biotechnology*, 2022.
+  A. Gayoso et al. _Nature Biotechnology_, 2022.
   doi: [10.1038/s41587-021-01206-w](https://doi.org/10.1038/s41587-021-01206-w)

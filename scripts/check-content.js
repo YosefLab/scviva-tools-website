@@ -38,7 +38,16 @@ const CHECKS = [
   },
   {
     file: "ecosystem/index.html",
-    includes: ["scVIVA", "ResolVI", "DestVI", "DiagVI", "Harreman", "gimVI", "Stereoscope", "Tangram"],
+    includes: [
+      "scVIVA",
+      "ResolVI",
+      "DestVI",
+      "DiagVI",
+      "Harreman",
+      "gimVI",
+      "Stereoscope",
+      "Tangram",
+    ],
   },
   {
     file: "blog/scviva-tools/index.html",
