@@ -85,7 +85,18 @@ module.exports = {
     },
   },
   plugins: ["docusaurus-plugin-sass"],
-  themes: [],
+  themes: [
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      {
+        hashed: true,
+        language: ["en"],
+        indexDocs: false,
+        indexBlog: true,
+        indexPages: true,
+      },
+    ],
+  ],
   presets: [
     [
       "@docusaurus/preset-classic",
