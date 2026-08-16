@@ -27,6 +27,15 @@ const CHECKS = [
     file: "team/index.html",
     includes: ["Nir Yosef", "Can Ergen", "Ori Kronfeld", "Draft roster"],
   },
+  {
+    file: "press/index.html",
+    includes: [
+      "10.1101/2025.06.01.657182",
+      "10.1038/s41587-022-01272-8",
+      "10.1101/2025.01.20.634005",
+      "10.1101/2025.11.11.687271",
+    ],
+  },
 ];
 
 function readBuiltFile(relativePath) {
