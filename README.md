@@ -25,6 +25,10 @@ npm run build   # static output in build/
 npm run serve   # serve the production build locally
 ```
 
+Note: `baseUrl` is set for the eventual `scviva-tools.org` custom domain — deploying to plain
+GitHub Pages without a custom domain will need `baseUrl` changed to `/scviva-tools-website/` (or a
+`static/CNAME` file added once the domain is live).
+
 ## Tests
 
 ```bash
@@ -38,15 +42,16 @@ UI test.
 
 ## Structure
 
-- `docusaurus.config.js`, `sidebars.js` — site configuration
-- `get_started/get_started.md` — the single Get Started doc
-- `src/pages/` — homepage, team, press, ecosystem
+- `docusaurus.config.js` — site configuration
+- `src/pages/` — homepage, Get Started, team, press, ecosystem
 - `src/theme/` — ported UI components (Hero, Features, TeamCard, IconLink)
 - `blog/` — blog posts
-- `docs/superpowers/specs/` and `docs/superpowers/plans/` — the design spec and implementation plan
-  this site was built from
+
+This site has no local search — `@easyops-cn/docusaurus-search-local` was evaluated and found
+incompatible with this project's `docs: false` setup (it crashes without the docs plugin); adding
+real search back would need a properly adapted SearchBar component, which was out of scope here.
 
 ## Contributing
 
-Open a PR editing the relevant page under `get_started/`, `src/pages/`, or `blog/`. CI
+Open a PR editing the relevant page under `src/pages/` or `blog/`. CI
 (`.github/workflows/ci.yml`) runs `npm test` and `npm run lint` on every push and PR.

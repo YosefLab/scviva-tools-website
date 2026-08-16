@@ -9,6 +9,7 @@ module.exports = {
   url: "https://scviva-tools.org",
   baseUrl: "/",
   onBrokenLinks: "throw",
+  onBrokenAnchors: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/logo.png",
   organizationName: "YosefLab",

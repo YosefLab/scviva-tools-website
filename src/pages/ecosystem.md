@@ -1,3 +1,7 @@
+---
+description: The eight spatial transcriptomics models and tools bundled in scVIVA-Tools.
+---
+
 # Ecosystem
 
 `scVIVA-Tools` consolidates eight spatial transcriptomics models and tools into one package. It is

@@ -1,6 +1,9 @@
 ---
 title: Get Started
+description: Install scVIVA-Tools and run your first spatial transcriptomics model.
 ---
+
+# Get Started
 
 `scVIVA-Tools` is a consolidated spatial transcriptomics analysis toolkit built on top of
 [scvi-tools](https://scvi-tools.org), exposing scVIVA, ResolVI, DestVI, DiagVI, Harreman, gimVI,
@@ -27,7 +30,7 @@ pip install "scviva-tools[all]"        # everything above
 import scviva
 
 # ResolVI: denoising and segmentation-error correction
-scviva.ResolVI.setup_anndata(adata, layer="counts", spatial_key="spatial")
+scviva.ResolVI.setup_anndata(adata, layer="counts")
 model = scviva.ResolVI(adata)
 model.train()
 

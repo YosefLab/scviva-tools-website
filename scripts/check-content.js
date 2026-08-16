@@ -12,6 +12,7 @@ const CHECKS = [
       "Consolidated spatial transcriptomics analysis toolkit built on scvi-tools",
       "pip install scviva-tools",
       "Unified AnnData-first API",
+      "<h1",
     ],
   },
   {
@@ -21,11 +22,12 @@ const CHECKS = [
       "scviva-tools[spatial]",
       "scviva-tools[rapids]",
       "ResolVI",
+      "<h1",
     ],
   },
   {
     file: "team/index.html",
-    includes: ["Nir Yosef", "Can Ergen", "Ori Kronfeld", "Draft roster"],
+    includes: ["Nir Yosef", "Can Ergen", "Ori Kronfeld", "Draft roster", "<h1"],
   },
   {
     file: "press/index.html",
@@ -34,6 +36,7 @@ const CHECKS = [
       "10.1038/s41587-022-01272-8",
       "10.1101/2025.01.20.634005",
       "10.1101/2025.11.11.687271",
+      "<h1",
     ],
   },
   {
@@ -47,12 +50,22 @@ const CHECKS = [
       "gimVI",
       "Stereoscope",
       "Tangram",
+      "<h1",
     ],
   },
   {
     file: "blog/scviva-tools/index.html",
-    includes: ["Introducing scVIVA-Tools", "pip install scviva-tools"],
+    includes: ["Introducing scVIVA-Tools", "pip install scviva-tools", "<h1"],
     excludes: ["scVI-Tools MCP", "Model Context Protocol"],
+  },
+  {
+    file: "index.html",
+    includes: [
+      'href="/get_started"',
+      'href="/team"',
+      'href="/press"',
+      'href="/ecosystem"',
+    ],
   },
 ];
 
