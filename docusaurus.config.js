@@ -85,21 +85,12 @@ module.exports = {
     },
   },
   plugins: ["docusaurus-plugin-sass"],
-  themes: [
-    [
-      require.resolve("@easyops-cn/docusaurus-search-local"),
-      {
-        hashed: true,
-        language: ["en"],
-        indexBlog: true,
-        indexPages: true,
-      },
-    ],
-  ],
+  themes: [],
   presets: [
     [
       "@docusaurus/preset-classic",
       {
+        docs: false,
         blog: {
           showReadingTime: true,
           editUrl: "https://github.com/YosefLab/scviva-tools-website/edit/main/blog/",
