@@ -7,7 +7,12 @@ const BUILD_DIR = path.join(__dirname, "..", "build");
 const CHECKS = [
   {
     file: "index.html",
-    includes: ["scVIVA-Tools"],
+    includes: [
+      "scVIVA-Tools",
+      "Consolidated spatial transcriptomics analysis toolkit built on scvi-tools",
+      "pip install scviva-tools",
+      "Unified AnnData-first API",
+    ],
   },
 ];
 
