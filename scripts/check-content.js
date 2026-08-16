@@ -23,6 +23,10 @@ const CHECKS = [
       "ResolVI",
     ],
   },
+  {
+    file: "team/index.html",
+    includes: ["Nir Yosef", "Can Ergen", "Ori Kronfeld", "Draft roster"],
+  },
 ];
 
 function readBuiltFile(relativePath) {
