@@ -92,6 +92,7 @@ module.exports = {
         docs: false,
         blog: {
           showReadingTime: true,
+          onInlineAuthors: "ignore",
           editUrl: "https://github.com/YosefLab/scviva-tools-website/edit/main/blog/",
           remarkPlugins: [math],
           rehypePlugins: [[katex, { strict: false }]],
