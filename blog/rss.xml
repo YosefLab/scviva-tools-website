@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>scVIVA-Tools Blog</title>
+        <link>https://scviva-tools.org/blog</link>
+        <description>scVIVA-Tools Blog</description>
+        <lastBuildDate>Wed, 08 Jul 2026 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <item>
+            <title><![CDATA[Introducing scVIVA-Tools]]></title>
+            <link>https://scviva-tools.org/blog/scviva-tools</link>
+            <guid>https://scviva-tools.org/blog/scviva-tools</guid>
+            <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Introduction]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="introduction">Introduction<a href="https://scviva-tools.org/blog/scviva-tools#introduction" class="hash-link" aria-label="Direct link to Introduction" title="Direct link to Introduction" translate="no">​</a></h2>
+<p>Alongside <code>scvi-tools</code> v1.5.0, we're shipping <strong>scVIVA-Tools</strong>, which consolidates spatial
+transcriptomics models into a single toolkit.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="scviva-tools-a-unified-toolkit-for-spatial-transcriptomics">scVIVA-Tools: a unified toolkit for spatial transcriptomics<a href="https://scviva-tools.org/blog/scviva-tools#scviva-tools-a-unified-toolkit-for-spatial-transcriptomics" class="hash-link" aria-label="Direct link to scVIVA-Tools: a unified toolkit for spatial transcriptomics" title="Direct link to scVIVA-Tools: a unified toolkit for spatial transcriptomics" translate="no">​</a></h2>
+<p>If you've ever had to juggle different APIs, installation instructions, and tutorial conventions
+for deconvolution, denoising, and niche analysis, scVIVA-Tools is meant to remove that friction.</p>
+<p>scVIVA-Tools bundles:</p>
+<ul>
+<li class=""><strong><a href="https://scviva-tools.readthedocs.io/page/user_guide/models/scviva.html" target="_blank" rel="noopener noreferrer" class="">scVIVA</a></strong> — a
+niche-aware VAE that jointly models a cell's own expression and its microenvironment,
+disentangling cell-intrinsic from environment-driven variation.</li>
+<li class=""><strong><a href="https://scviva-tools.readthedocs.io/page/user_guide/models/resolvi.html" target="_blank" rel="noopener noreferrer" class="">ResolVI</a></strong> —
+corrects segmentation errors, background contamination, and cell-size bias in
+cellular-resolution data (Xenium, MERFISH, CosMx).</li>
+<li class=""><strong><a href="https://scviva-tools.readthedocs.io/page/user_guide/models/destvi.html" target="_blank" rel="noopener noreferrer" class="">DestVI</a></strong> —
+multi-resolution deconvolution of spot-based data (e.g., Visium) into continuous cell-type
+compositions.</li>
+<li class=""><strong><a href="https://scviva-tools.readthedocs.io/page/user_guide/models/diagvi.html" target="_blank" rel="noopener noreferrer" class="">DiagVI</a></strong> —
+diagonal integration of unpaired multi-modal single-cell data.</li>
+<li class=""><strong><a href="https://scviva-tools.readthedocs.io/page/user_guide/models/gimvi.html" target="_blank" rel="noopener noreferrer" class="">gimVI</a></strong> — joint
+imputation of missing genes between scRNA-seq and spatial datasets.</li>
+<li class=""><strong><a href="https://scviva-tools.readthedocs.io/page/user_guide/models/stereoscope.html" target="_blank" rel="noopener noreferrer" class="">Stereoscope</a></strong> —
+a two-stage generative model for spot deconvolution.</li>
+<li class=""><strong><a href="https://scviva-tools.readthedocs.io/page/user_guide/models/tangram.html" target="_blank" rel="noopener noreferrer" class="">Tangram</a></strong> — maps
+single cells onto spatial coordinates via optimal transport-style alignment.</li>
+<li class=""><strong><a href="https://scviva-tools.readthedocs.io/page/user_guide/models/harreman.html" target="_blank" rel="noopener noreferrer" class="">Harreman</a></strong> —
+infers spatially-resolved metabolic gene programs and cell-cell metabolic/ligand-receptor
+communication using local autocorrelation and spatial proximity graphs.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="why-a-unified-package">Why a unified package?<a href="https://scviva-tools.org/blog/scviva-tools#why-a-unified-package" class="hash-link" aria-label="Direct link to Why a unified package?" title="Direct link to Why a unified package?" translate="no">​</a></h3>
+<p>Each of these models started life with its own API, its own docs, and its own release cadence —
+great for iterating quickly, but hard for users trying to build an end-to-end spatial analysis
+pipeline. scVIVA-Tools gives them a single <code>pip install</code>, one consistent <code>scviva</code> namespace and
+AnnData-first API, a shared user guide, API reference, and worked tutorials for every model, plus
+shared infrastructure for GPU acceleration (via optional <code>rapids</code> extras) and
+<code>SpatialData</code>/<code>squidpy</code> interop.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="getting-started">Getting started<a href="https://scviva-tools.org/blog/scviva-tools#getting-started" class="hash-link" aria-label="Direct link to Getting started" title="Direct link to Getting started" translate="no">​</a></h3>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">pip install scviva-tools</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"># or, with spatial I/O and GPU acceleration</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">pip install "scviva-tools[spatial,rapids]"</span><br></div></code></pre></div></div>
+<div class="language-python codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-python codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">import</span><span class="token plain"> scviva</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">import</span><span class="token plain"> scanpy </span><span class="token keyword" style="color:#00009f">as</span><span class="token plain"> sc</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">adata </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> sc</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">read_h5ad</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">"my_xenium_data.h5ad"</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">scviva</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">model</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">ResolVI</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">setup_anndata</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">adata</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> layer</span><span class="token operator" style="color:#393A34">=</span><span class="token string" style="color:#e3116c">"counts"</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">model </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> scviva</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">model</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">ResolVI</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">adata</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">model</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">train</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">adata</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">obsm</span><span class="token punctuation" style="color:#393A34">[</span><span class="token string" style="color:#e3116c">"X_resolvi"</span><span class="token punctuation" style="color:#393A34">]</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> model</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">get_latent_representation</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><br></div></code></pre></div></div>
+<p>Swapping in scVIVA for niche-aware differential expression, or DestVI for Visium deconvolution,
+follows the same pattern — setup, train, extract. See the
+<a href="https://scviva-tools.readthedocs.io/page/index.html" target="_blank" rel="noopener noreferrer" class="">scVIVA-Tools documentation</a> for the full API
+reference and tutorials for each model.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="try-it-out">Try it out<a href="https://scviva-tools.org/blog/scviva-tools#try-it-out" class="hash-link" aria-label="Direct link to Try it out" title="Direct link to Try it out" translate="no">​</a></h2>
+<p>Please try scVIVA-Tools out, open issues, and let us know what you'd like to see next on
+<a href="https://github.com/YosefLab/scviva-tools" target="_blank" rel="noopener noreferrer" class="">GitHub</a>.</p>]]></content:encoded>
+            <category>scviva-tools</category>
+            <category>spatial</category>
+            <category>release</category>
+        </item>
+    </channel>
+</rss>

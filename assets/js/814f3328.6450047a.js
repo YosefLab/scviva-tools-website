@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkscviva_tools_website||=[]).push([[472],{5513(s){s.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Introducing scVIVA-Tools","permalink":"/blog/scviva-tools","unlisted":false,"date":"2026-07-08T00:00:00.000Z"}]}')}}]);

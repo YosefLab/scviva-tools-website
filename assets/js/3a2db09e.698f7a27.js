@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkscviva_tools_website||=[]).push([[121],{8070(a){a.exports=JSON.parse('{"tags":[{"label":"scviva-tools","permalink":"/blog/tags/scviva-tools","count":1},{"label":"spatial","permalink":"/blog/tags/spatial","count":1},{"label":"release","permalink":"/blog/tags/release","count":1}]}')}}]);
