@@ -1,0 +1,49 @@
+{
+  "name": "scviva-tools-website",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "docusaurus": "docusaurus",
+    "start": "docusaurus start",
+    "build": "docusaurus build",
+    "swizzle": "docusaurus swizzle",
+    "deploy": "docusaurus deploy",
+    "serve": "docusaurus serve",
+    "clear": "docusaurus clear",
+    "test": "npm run build && node scripts/check-content.js",
+    "lint": "prettier --check ."
+  },
+  "dependencies": {
+    "@docusaurus/core": "^3.10.2",
+    "@docusaurus/preset-classic": "^3.10.2",
+    "@fortawesome/fontawesome-svg-core": "^7.3.1",
+    "@fortawesome/free-brands-svg-icons": "^7.3.1",
+    "@fortawesome/react-fontawesome": "^3.1.1",
+    "@mdx-js/react": "^3.1.1",
+    "classnames": "^2.3.1",
+    "clsx": "^1.1.1",
+    "docusaurus-plugin-sass": "^0.2.1",
+    "prism-react-renderer": "^2.3.0",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "react-icons": "^5.7.0",
+    "rehype-katex": "7.0",
+    "remark-math": "^6.0.0",
+    "sass": "^1.38.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "prettier": "3.9.5"
+  }
+}

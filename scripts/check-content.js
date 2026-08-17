@@ -1,0 +1,116 @@
+const fs = require("fs");
+const path = require("path");
+
+const BUILD_DIR = path.join(__dirname, "..", "build");
+
+// Each task in the implementation plan appends entries here.
+const CHECKS = [
+  {
+    file: "index.html",
+    includes: [
+      "scVIVA-Tools",
+      "Consolidated spatial transcriptomics analysis toolkit built on scvi-tools",
+      "pip install scviva-tools",
+      "Unified AnnData-first API",
+      "<h1",
+    ],
+  },
+  {
+    file: "get_started/index.html",
+    includes: [
+      "pip install scviva-tools",
+      "scviva-tools[spatial]",
+      "scviva-tools[rapids]",
+      "ResolVI",
+      "<h1",
+    ],
+  },
+  {
+    file: "team/index.html",
+    includes: ["Nir Yosef", "Can Ergen", "Ori Kronfeld", "Draft roster", "<h1"],
+  },
+  {
+    file: "press/index.html",
+    includes: [
+      "10.1101/2025.06.01.657182",
+      "10.1038/s41587-022-01272-8",
+      "10.1101/2025.01.20.634005",
+      "10.1101/2025.11.11.687271",
+      "<h1",
+    ],
+  },
+  {
+    file: "ecosystem/index.html",
+    includes: [
+      "scVIVA",
+      "ResolVI",
+      "DestVI",
+      "DiagVI",
+      "Harreman",
+      "gimVI",
+      "Stereoscope",
+      "Tangram",
+      "<h1",
+    ],
+  },
+  {
+    file: "blog/scviva-tools/index.html",
+    includes: ["Introducing scVIVA-Tools", "pip install scviva-tools", "<h1"],
+    excludes: ["scVI-Tools MCP", "Model Context Protocol"],
+  },
+  {
+    file: "index.html",
+    includes: [
+      'href="/get_started"',
+      'href="/team"',
+      'href="/press"',
+      'href="/ecosystem"',
+    ],
+  },
+];
+
+function readBuiltFile(relativePath) {
+  const fullPath = path.join(BUILD_DIR, relativePath);
+  if (!fs.existsSync(fullPath)) {
+    throw new Error(`Expected built file not found: ${fullPath}`);
+  }
+  return fs.readFileSync(fullPath, "utf8");
+}
+
+function main() {
+  let failures = 0;
+
+  for (const check of CHECKS) {
+    let contents;
+    try {
+      contents = readBuiltFile(check.file);
+    } catch (err) {
+      console.error(`FAIL [${check.file}]: ${err.message}`);
+      failures += 1;
+      continue;
+    }
+
+    for (const needle of check.includes || []) {
+      if (!contents.includes(needle)) {
+        console.error(`FAIL [${check.file}]: expected to find "${needle}"`);
+        failures += 1;
+      }
+    }
+
+    for (const needle of check.excludes || []) {
+      if (contents.includes(needle)) {
+        console.error(`FAIL [${check.file}]: expected NOT to find "${needle}"`);
+        failures += 1;
+      }
+    }
+  }
+
+  if (failures > 0) {
+    console.error(`\n${failures} content check(s) failed.`);
+    process.exit(1);
+  }
+
+  console.log(`All ${CHECKS.length} content check(s) passed.`);
+}
+
+main();

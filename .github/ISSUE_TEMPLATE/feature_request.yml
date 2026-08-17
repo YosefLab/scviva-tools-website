@@ -1,0 +1,11 @@
+name: Feature request
+description: Suggest content or a feature for the scviva-tools website
+labels: enhancement
+body:
+  - type: textarea
+    id: request
+    attributes:
+      label: What would you like to see
+      description: Describe the content or feature you'd like added to the site.
+    validations:
+      required: true
