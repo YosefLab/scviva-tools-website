@@ -3,6 +3,7 @@ description: The people behind scVIVA-Tools, built on scvi-tools at the Yosef La
 ---
 
 import TeamCard from "@theme/TeamCard";
+import useBaseUrl from "@docusaurus/useBaseUrl";
 
 # Team
 
@@ -19,6 +20,7 @@ scviva-tools and should be listed here, let us know via
   <div className="col col--4">
     <TeamCard
       name="Nir Yosef"
+      image={useBaseUrl(`img/team-pics/nir.jpeg`)}
       description="Weizmann Institute of Science"
       websiteLink="https://yoseflab.github.io"
       githubLink="https://github.com/YosefLab"
@@ -31,16 +33,26 @@ scviva-tools and should be listed here, let us know via
 <div className="row margin-vert--md">
   <div className="col col--4">
     <TeamCard
+      name="Ori Kronfeld"
+      image={useBaseUrl(`img/team-pics/ori.jpeg`)}
+      description="Weizmann Institute of Science"
+      githubLink="https://github.com/ori-kron-wis"
+    />
+  </div>
+  <div className="col col--4">
+    <TeamCard
       name="Can Ergen-Behr"
-      description="UC Berkeley — ResolVI"
+      image={useBaseUrl(`img/team-pics/can.jpeg`)}
+      description="JMU Würzburg, Helmholtz Munich"
       githubLink="https://github.com/canergen"
     />
   </div>
   <div className="col col--4">
     <TeamCard
-      name="Ori Kronfeld"
+      name="Nathan Levy"
+      image={useBaseUrl(`img/team-pics/nathan.jpg`)}
       description="Weizmann Institute of Science"
-      githubLink="https://github.com/ori-kron-wis"
+      githubLink="https://github.com/LevyNat"
     />
   </div>
 </div>
