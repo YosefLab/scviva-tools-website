@@ -6,7 +6,7 @@
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://scviva-tools.org/blog"/>
     <subtitle>scVIVA-Tools Blog</subtitle>
-    <icon>https://scviva-tools.org/img/logo.png</icon>
+    <icon>https://scviva-tools.org/img/logo2.png</icon>
     <entry>
         <title type="html"><![CDATA[Introducing scVIVA-Tools]]></title>
         <id>https://scviva-tools.org/blog/scviva-tools</id>
