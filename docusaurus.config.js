@@ -11,7 +11,7 @@ module.exports = {
   onBrokenLinks: "throw",
   onBrokenAnchors: "throw",
   onBrokenMarkdownLinks: "warn",
-  favicon: "img/logo2.png",
+  favicon: "img/logo2.svg",
   organizationName: "YosefLab",
   projectName: "scviva-tools-website",
   stylesheets: ["https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"],
@@ -29,7 +29,7 @@ module.exports = {
       title: "scVIVA-Tools",
       logo: {
         alt: "scVIVA-Tools Logo",
-        src: "img/logo2.png",
+        src: "img/logo2.svg",
       },
       items: [
         { to: "get_started", label: "Get Started", position: "right" },
