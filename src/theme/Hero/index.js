@@ -40,7 +40,7 @@ function Hero() {
           </div>
           <div className={classnames("col col--4")}>
             <img
-              src={useBaseUrl(`img/logo.png`)}
+              src={useBaseUrl(`img/logo2.png`)}
               alt="scVIVA-Tools Logo"
               className={styles.heroImg}
             />
